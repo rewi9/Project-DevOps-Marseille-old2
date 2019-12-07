@@ -21,6 +21,7 @@ node {
      sh 'cat ip'
      LINK=readFile('ip')
    }
+   
    stage('Discord') {
    discordSend description: "$LINK", webhookURL: "https://discordapp.com/api/webhooks/652441372648931348/iTGabKcf_Bq6C_hXiiwtg_KOYpEW-OA_RcdD5v7PCcKjERCoxT4PcYXTZntQTyixLZy6"
    discordSend description: "Deployment finished", webhookURL: "https://discordapp.com/api/webhooks/652441372648931348/iTGabKcf_Bq6C_hXiiwtg_KOYpEW-OA_RcdD5v7PCcKjERCoxT4PcYXTZntQTyixLZy6"
